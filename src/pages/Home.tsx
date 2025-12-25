@@ -10,7 +10,7 @@ type UsersArray = IUserCard[];
 
 const Home = () => {
   const [search, setSearch] = useState<string>("");
-  const [filtered, setFiltered] = useState<UsersArray>([]);
+  const [filtered, setFiltered] = useState<UsersArray | undefined>([]);
 
   const { data } = useQuery({
     queryKey: ["users"],
